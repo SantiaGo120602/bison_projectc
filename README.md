@@ -1,10 +1,11 @@
 # bison_projectc
-##Lenguajes de programación
-##Bizon
-##Santiago Javier Vivas
-##Samuel Medina Mora
-##Julieth Manzano
-##Alejandro Toloza
+
+### Lenguajes de programación
+### Bizon
+### Santiago Javier Vivas
+### Samuel Medina Mora
+### Julieth Manzano
+### Alejandro Toloza
 
 >Requisitos:
 * Make
@@ -12,8 +13,23 @@
 * bison
 * flex
 
->Ejecución:
-
+> Ejecución:
+* Para compilar ambas calculadoras:
+```bash
+make
+```
+* Para compilar la calculadora sencilla:
+```bash
+make fb3-1
+```
+* Para compilar la calculadora modificada:
+```bash
+make fb3-2
+```
+* Para eliminar los archivos generados:
+```bash
+make clean
+```
 ## **1)**
 ¿Puedes cambiar la sintaxis para hacerla más intuitiva? Si añades símbolos de cierre a las sentencias condicionales if/then/else/ fi y a los bucles while/do/done, ¿puedes flexibilizar la sintaxis de las listas de sentencias?
 
@@ -27,6 +43,6 @@ En el último ejemplo, las funciones de usuario evalúan todos los argumentos re
 
 > Al hacer una implementación con una matriz temporal, se permite una evaluación más eficiente de los argumentos, ya que se pueden evaluar todos juntos y luego asignarlos en una sola operación en lugar de hacer múltiples asignaciones. Además, si se produce un error en uno de los argumentos reales, los valores de los argumentos ficticios no se modificarán y se mantendrán los valores originales. Esto puede ser importante si los valores de los argumentos ficticios se utilizan en otros cálculos más adelante en la función.
 
-Por otro lado, si se realiza la implementación uno a uno, como se ha hecho en este caso, puede que en la mayoría de los casos funcione correctamente, sin embargo, los valores ficticios antiguos (que han sido reemplazados por los argumentos reales actuales) se pierden y no es posible reasignarlos, dejándolos como estaban originalmente. Si esto genera un error, no hay manera de evitarlo.
+> Por otro lado, si se realiza la implementación uno a uno, como se ha hecho en este caso, puede que en la mayoría de los casos funcione correctamente, sin embargo, los valores ficticios antiguos (que han sido reemplazados por los argumentos reales actuales) se pierden y no es posible reasignarlos, dejándolos como estaban originalmente. Si esto genera un error, no hay manera de evitarlo.
 
-En resumen, la razón principal de utilizar una matriz temporal es para lograr una evaluación eficiente y mantener los valores originales de los argumentos ficticios en caso de error, lo que puede ser importante si se usan en cálculos posteriores.
+> En resumen, la razón principal de utilizar una matriz temporal es para lograr una evaluación eficiente y mantener los valores originales de los argumentos ficticios en caso de error, lo que puede ser importante si se usan en cálculos posteriores.
